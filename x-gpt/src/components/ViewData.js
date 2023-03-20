@@ -2,6 +2,7 @@ import React from "react";
 import { Row, Col, Button, Table } from "antd";
 import { stockData } from "../Data";
 import { useNavigate } from "react-router-dom";
+import AskQuestion from './AskQuestion'
 
 function ViewData() {
   const navigate = useNavigate();
@@ -41,12 +42,13 @@ function ViewData() {
             size="middle"
           />
         </Col>
-        <Col span={24} style={{ marginTop: '-32px' }}>
+        {/* <Col span={24} style={{ marginTop: '-32px' }}>
           <Button className="btn" onClick={navigateAskQuestion}>
             Next
           </Button>
-        </Col>
+        </Col> */}
       </Row>
+      <AskQuestion />
     </div>
   );
 }

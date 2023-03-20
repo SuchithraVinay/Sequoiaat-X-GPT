@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, Button, Input, Form } from "antd";
+import { Row, Col, Button, Input } from "antd";
 import { QuestionCircleOutlined } from "@ant-design/icons";
 
 const { TextArea } = Input;
@@ -34,7 +34,7 @@ function AskQuestion() {
 
   const gutter = { xs: 8, sm: 16, md: 16, lg: 16, xl: 16, xxl: 16 };
   return (
-    <div>
+    <div style={{ marginTop: '-98px' }}>
       <Row className="center">
         <Col>
           <Row justify="start">
