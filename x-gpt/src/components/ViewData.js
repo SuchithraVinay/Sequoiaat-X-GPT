@@ -10,49 +10,16 @@ function ViewData() {
     navigate("/AskQuestion");
   };
 
-  const tableData = stockData.map((data) => {
+ const tableData = stockData.data_list;
+  const columns = stockData.columns.map((data) => {
     return {
-      key: data.id,
-      id: data.id,
-      company: data.company,
-      ticker: data.ticker,
-      stockPrice: data.stockPrice,
-      timeElapsed: data.timeElapsed,
-    };
+      title: data,
+      dataIndex: data,
+      key: data,
+      width: 100,
+    }
   });
-
-  const columns = [
-    {
-      title: "ID",
-      dataIndex: "id",
-      key: "id",
-      width: 50,
-    },
-    {
-      title: "Company",
-      dataIndex: "company",
-      key: "company",
-      width: 100,
-    },
-    {
-      title: "Ticker",
-      dataIndex: "ticker",
-      key: "ticker",
-      width: 100,
-    },
-    {
-      title: "StockPrice",
-      dataIndex: "stockPrice",
-      key: "stockPrice",
-      width: 100,
-    },
-    {
-      title: "TimeElapsed",
-      dataIndex: "timeElapsed",
-      key: "timeElapsed",
-      width: 100,
-    },
-  ];
+  
   return (
     <div>
       <Row className="center">
