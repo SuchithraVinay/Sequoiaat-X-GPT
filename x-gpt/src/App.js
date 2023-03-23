@@ -27,7 +27,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Login />}></Route>
           <Route exact path="/DocumentUpload" element={<DocumentUpload />}></Route>
-          <Route exact path="/ViewData" element={<ViewData />}></Route>
+          <Route path="/ViewData" element={<ViewData />}></Route>
           <Route exact path="/AskQuestion" element={<AskQuestion />}></Route>
         </Routes>
       </Router>
