@@ -6,16 +6,17 @@ function ViewData()
 {
 	const localStorageData = JSON.parse(localStorage.getItem("tableData"));
 
-	const tableData = localStorageData.output_data.data_list;
-	const columns = localStorageData.output_data.columns.map((data) => 
-	{
-		return {
-			title: data,
-			dataIndex: data,
-			key: data,
-			width: 100,
-		}
-	});
+	const tableData = (localStorageData && localStorageData.output_data != null) ? localStorageData.output_data.data_list : [];
+	const columns = (localStorageData && localStorageData.output_data != null) ?
+		localStorageData.output_data.columns.map((data) => 
+		{
+			return {
+				title: data,
+				dataIndex: data,
+				key: data,
+				width: 100,
+			}
+		}) : [];
   
 	return (
 		<div>

@@ -65,9 +65,9 @@ function DocumentUpload()
 				if(fileUploadRes)
 				{
 					setErrorMsg("");
-					message.success("file uploaded successfully.");
+					// message.success("file uploaded successfully.");
 					localStorage.setItem("tableData", JSON.stringify(fileUploadRes))
-					navigate('/ViewData', { state: fileUploadRes })
+					navigate('/ViewData', { state: fileUploadRes });
 				} else
 				{
 					setErrorMsg("File upload failed");
